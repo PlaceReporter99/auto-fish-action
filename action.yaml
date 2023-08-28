@@ -1,0 +1,22 @@
+name: "Automatically Fish"
+description: "Automatically fish using OakBot."
+inputs:
+  username:
+    description: "Your Stack Exchange chat username"
+    required: true
+  email:
+    description: "Your Stack Exchange chat e-mail"
+    required: true
+  password:
+    description: "Your Stack Exchange chat password"
+    required: true
+  room:
+    description: "The room to do this in"
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - run: python3 bot.py ${{ inputs.username }} ${{ inputs.room }}
+      env:
+        email: ${{ inputs.email }}
+        password: ${{ inputs.password }}
