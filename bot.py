@@ -6,7 +6,7 @@ import re
 import html
 
 USERNAME = sys.argv[1]
-ROOM = sys.argv[2]
+ROOM = int(sys.argv[2])
 EMAIL = os.environ["email"]
 PASSWORD = os.environ["password"]
 PHRASE = f"🐟 <i>{USERNAME}'s line quivers.</i>"
