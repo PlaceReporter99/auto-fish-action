@@ -1,4 +1,8 @@
-# chat-bot
-Setup instructions
-## Email and Password
-Set the email and password in the `BOT_EMAIL` and `BOT_PASSWORD` secret variables. They will be passed as command-line arguments.
+# Auto Fish
+Just provide the action with these details:
+* e-mail
+* password
+* username
+* room number
+
+and it will do it's magic. GitHub actions times out after 6 hours, so you will need to use cron to reboot the script every so often.
